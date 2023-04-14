@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+$color1: #555555;
+$color2: #000000;
+$color3: #5a98f2;
+$color4: #ffffff;
+$color5: #458ff6;
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(233, 233, 233);
+  font-family: "Poiret One", sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .navbar {
+      width: 100%;
+      padding-top: 2rem;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+
+      li a {
+        color: $color1;
+        padding: 0 1.1rem;
+
+        &:hover {
+          color: $color2;
+          font-weight: bold;
+        }
+      }
+    }
+    #showcase {
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .showcase-text {
+        display: flex;
+        height: auto;
+        justify-content: space-around;
+        flex-direction: row;
+        margin: 5px;
+        padding: 10px;
+        align-items: center;
+        .showcase-text_buttons {
+          display: flex;
+          flex-direction: column;
+          height: 100px;
+          justify-content: space-between;
+          padding: 6px;
+          margin: 7px;
+          button {
+            width: 180px;
+            height: 45px;
+            border: 0.1rem solid $color3;
+            border-radius: 20px;
+            background-color: rgb(233, 233, 233);
+            cursor: pointer;
+            outline: none;
+            color: $color3;
+            font-weight: bold;
+
+            &:hover {
+              background-color: $color3;
+              color: $color4;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+
+        h1 {
+          font-size: 2rem;
+          width: 90%;
+          padding-bottom: 20px;
+        }
+
+        p {
+          width: 90%;
+          opacity: 0.9;
+          line-height: 1.5;
+          padding-right: 20px;
+        }
+      }
+      .showcase-btn {
+        margin-top: 1.5rem;
+        margin: 25px;
+        height: 3.5rem;
+        padding-left: 10px;
+        border: none;
+        background-color: $color5;
+        color: $color4;
+        border-radius: 20px;
+        padding: 0.8rem 2rem;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+    .createPatient {
+      background-color: $color3;
+      height: auto;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      opacity: 90%;
+      box-shadow: 0 4px 16px rgb(186, 184, 184);
+      justify-content: space-around;
+
+      input[type="text"] {
+        width: 180px;
+        font-size: 1rem;
+        color: $color2;
+        border: none;
+        border-radius: 3px;
+        outline: none;
+        transition: 0.3s;
+      }
+    }
+    #data-field {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .dataPatient {
+        border-radius: 8px;
+        background-color: $color3;
+        box-shadow: 0 4px 16px rgb(186, 184, 184);
+        padding: 20px;
+        margin: 10px;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        opacity: 85%;
+        li {
+          user-select: none;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: space-between;
+        }
+        li i {
+          color: $color1;
+          font-size: 15px;
+          cursor: pointer;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    width: 100%;
+    gap: 10px;
+    footer hr {
+      width: 90%;
+      height: 0px;
+      border: 1px solid $color1;
+    }
+    .footer-social {
+      display: flex;
+      width: 25%;
+      align-items: flex-end;
+    }
+    .foot-socials {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+    .footer-rights {
+      display: flex;
+      width: 35%;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 15px;
+    }
+    .footer-nav {
+      width: 25%;
+      justify-content: flex-end;
+    }
+    .foot-nav--list {
+      & li a {
+        text-decoration: none;
+        color: $color2;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .container #showcase .showcase-text {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .footer-container {
+    padding: 5px;
+  }
+}

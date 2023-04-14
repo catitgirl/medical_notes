@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/createPatient/styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>List of patients</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="./pictures/logoheart.png" alt="heart" class="logo">
+            <ul class="nav-links">
+                <li><a href="/index.html">На главную</a></li>
+            </ul>
+        </nav>
+        <section id="showcase">
+            <div class="showcase-text">
+                <h1>Создайте свою базу пациентов</h1>
+                <p>MedicalNotes -  это современная записная книга для доктора, позволяющая вести прием и учет пациентов.</p>
+                    <div class="showcase-text_buttons"><button  id="clearStorage"  onclick="myDelete()";>Очистить данные</button>
+                    <button type="submit" id="dataAdd" >Внести данные</button></div> </div>
+        </section>
+        <div class="createPatient">
+        <p class="input_form">
+            <input  type="text" id="data-surname" placeholder="Фамилия">
+            </p>
+            <p>
+            <input  type="text" id="data-name" placeholder="Имя">
+            </p>
+            <p>
+            <input  type="text" id="data-lastname" placeholder="Отчество">
+            </p>
+            <p>
+            <input type="text" id="data-phone" placeholder="Телефон" >
+            </p>
+            <p>
+            <input type="text" id="data-email" placeholder="Email" >
+            </p>
+            
+            </div>
+            <div id= "data-field">
+            </div>
+            
+            <footer>
+				<hr />
+				<div class="footer-container">
+					<div class="footer-social">
+						<ul class="foot-socials">
+							<li>
+								<a href="#"
+									><img
+										src="./pictures/inst1.svg"
+										alt="inst"
+										width="24"
+								/></a>
+							</li>
+							<li>
+								<a href="#"
+									><img
+										src="./pictures/fb.svg"
+										alt="fb"
+										width="24"
+								/></a>
+							</li>
+							<li>
+								<a href="#"
+									><img
+										src="./pictures/tw1.svg"
+										alt="tw"
+										width="24"
+								/></a>
+							</li>
+							<li>
+								<a href="#"
+									><img
+										src="./pictures/pinterest1.svg"
+										alt="pint"
+										width="24"
+								/></a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-rights">© Все права защищены 2023</div>
+					<div class="footer-nav">
+						<ul class="foot-nav--list">
+							<li><a href="/index.html">Главная</a></li>
+							<li>
+								<a href="/regForm/index.html">Для доктора</a>
+							</li>
+							<li><a href="/createPage/index.html">Для пациента</a></li>
+		
+						</ul>
+					</div>
+				</div>
+			</footer>
+        </div>
+        
+    <script src= "/createPatient/scripts/script.js"></script>
+</body>
+
+</html>

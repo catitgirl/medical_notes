@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="./styles/style.css"/>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="column-1">
+        <div class="app-1">
+          <div class="app-1-left">
+            <form class="form novalidate" action="" id="add-form">
+              <input
+                class="input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Фамилия, имя*"
+              />
+              <div class="errors"></div>
+              <input
+                class="input input-email"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Ваш e-mail*"
+              />
+              <div class="errors"></div>
+              <input
+                class="input input-phone"
+                type="tel"
+                id="tel"
+                name="phone"
+                placeholder="Ваш телефон*"
+              />
+              <div class="errors"></div>
+              <span class="custom-dropdown big">
+                <select name="select">
+                  <option value="" selected>Выберите специализацию</option>
+                  <option value="cardiologist">Кардиолог</option>
+                  <option value="endocrinologist">Эндокринолог</option>
+                  <option value="oncologist">Онколог</option>
+                  <option value="gynecologist">Гинеколог</option>
+                  <option value="rehabilitologist">Реабилитолог</option>
+                  <option value="ophthalmologist">Офтальмолог</option>
+                  <option value="otolaryngologist">Отоларинголог</option>
+                  <option value="infectionist">Инфекционист</option>
+                  <option value="pulmonologist">Пульмонолог</option>
+                  <option value="urologist">Уролог</option>
+                </select>
+              </span>
+              <div class="errors"></div>
+              <input
+                class="input input-password"
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="off"
+                placeholder="Пароль*"
+              />
+              <div class="errors"></div>
+              <input
+                class="input input-password2"
+                type="password"
+                id="password2"
+                name="password2"
+                autocomplete="off"
+                placeholder="Повторите пароль*"
+              />
+              <div class="errors"></div>
+              <button type="submit" class="app-btn">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="column-2">
+        <div class="app-1-right">
+          <img src="./pictures/picture_registration.png" alt="picture" />
+        </div>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

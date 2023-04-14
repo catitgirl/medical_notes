@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(233, 233, 233);
+  font-family: "Poiret One", sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+}
+body .container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body .container .navbar {
+  width: 100%;
+  padding-top: 2rem;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body .container .logo {
+  width: 50px;
+  height: 50px;
+}
+body .container .nav-links {
+  display: flex;
+}
+body .container .nav-links li a {
+  color: #555555;
+  padding: 0 1.1rem;
+}
+body .container .nav-links li a:hover {
+  color: #000000;
+  font-weight: bold;
+}
+body .container #showcase {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+body .container #showcase .showcase-text {
+  display: flex;
+  height: auto;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 5px;
+  padding: 10px;
+  align-items: center;
+}
+body .container #showcase .showcase-text .showcase-text_buttons {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+  padding: 6px;
+  margin: 7px;
+}
+body .container #showcase .showcase-text .showcase-text_buttons button {
+  width: 180px;
+  height: 45px;
+  border: 0.1rem solid #5a98f2;
+  border-radius: 20px;
+  background-color: rgb(233, 233, 233);
+  cursor: pointer;
+  outline: none;
+  color: #5a98f2;
+  font-weight: bold;
+}
+body .container #showcase .showcase-text .showcase-text_buttons button:hover {
+  background-color: #5a98f2;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+body .container #showcase .showcase-text h1 {
+  font-size: 2rem;
+  width: 90%;
+  padding-bottom: 20px;
+}
+body .container #showcase .showcase-text p {
+  width: 90%;
+  opacity: 0.9;
+  line-height: 1.5;
+  padding-right: 20px;
+}
+body .container #showcase .showcase-btn {
+  margin-top: 1.5rem;
+  margin: 25px;
+  height: 3.5rem;
+  padding-left: 10px;
+  border: none;
+  background-color: #458ff6;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+body .container #showcase .showcase-btn:hover {
+  opacity: 0.9;
+}
+body .container .createPatient {
+  background-color: #5a98f2;
+  height: auto;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  opacity: 90%;
+  box-shadow: 0 4px 16px rgb(186, 184, 184);
+  justify-content: space-around;
+}
+body .container .createPatient input[type=text] {
+  width: 180px;
+  font-size: 1rem;
+  color: #000000;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  transition: 0.3s;
+}
+body .container #data-field {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+body .container #data-field .dataPatient {
+  border-radius: 8px;
+  background-color: #5a98f2;
+  box-shadow: 0 4px 16px rgb(186, 184, 184);
+  padding: 20px;
+  margin: 10px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  opacity: 85%;
+}
+body .container #data-field .dataPatient li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+body .container #data-field .dataPatient li i {
+  color: #555555;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+body .footer-container {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  width: 100%;
+  gap: 10px;
+}
+body .footer-container footer hr {
+  width: 90%;
+  height: 0px;
+  border: 1px solid #555555;
+}
+body .footer-container .footer-social {
+  display: flex;
+  width: 25%;
+  align-items: flex-end;
+}
+body .footer-container .foot-socials {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+body .footer-container .footer-rights {
+  display: flex;
+  width: 35%;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 15px;
+}
+body .footer-container .footer-nav {
+  width: 25%;
+  justify-content: flex-end;
+}
+body .footer-container .foot-nav--list li a {
+  text-decoration: none;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  body .container #showcase .showcase-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+body .footer-container {
+  padding: 5px;
+}/*# sourceMappingURL=style.css.map */

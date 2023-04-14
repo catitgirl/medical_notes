@@ -1,0 +1,16 @@
+#ftr {
+  color: blue;
+  border: 3px solid #b641b0;
+}
+#ftr .sec1 {
+  padding-top: 10px;
+}
+#ftr .sec1 span {
+  color: red;
+}
+#ftr .pic {
+  margin: -5px;
+}
+#ftr .pic:hover {
+  color: green;
+}/*# sourceMappingURL=style.css.map */

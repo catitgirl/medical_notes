@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+$var1: #555555;
+$var2: #000000;
+$var3: #5a98f2;
+$var4: #ffffff;
+$var5: #458ff6;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(233, 233, 233);
+  font-family: "Poiret One", sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+  overflow-x: hidden;
+  position: relative;
+  .container {
+    width: 100%;
+    margin: auto;
+
+    #patientContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      flex-direction: row;
+      opacity: 95%;
+    }
+    .patient {
+      width: 270px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      padding-top: 15px;
+      align-items: center;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #a8c1e1;
+      font-family: "Poiret One", sans-serif;
+      box-shadow: 0 4px 16px rgb(163, 163, 163);
+      font-weight: bolder;
+      font-size: 16px;
+      margin: 10px;
+      opacity: 85%;
+    }
+    .patient-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+    }
+    .avatar {
+      width: 100%; /* Ширина занимает всю доступную ширину родительского элемента */
+      max-width: 200px; /* Максимальная ширина 200px */
+      height: auto; /* Высота автоматически рассчитывается, сохраняя пропорции */
+      border-radius: 5px;
+      box-shadow: 0 4px 16px rgb(163, 163, 163);
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .navbar {
+    padding-top: 2rem;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-links {
+    display: flex;
+
+    li a {
+      color: $var1;
+      padding: 0 1.1rem;
+
+      &:hover {
+        color: $var2;
+        font-weight: bold;
+      }
+    }
+  }
+  #showcase {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    .showcase-text {
+      width: 1100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 5px;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+      h3 {
+        opacity: 0.9;
+        margin-top: 15px;
+      }
+    }
+    .showcase-btn {
+      width: 200px;
+      height: 45px;
+      border: 0.1rem solid #6588b9;
+      border-radius: 20px;
+      background-color: rgb(233, 233, 233);
+      cursor: pointer;
+      outline: none;
+      color: #6588b9;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #6588b9;
+        color: $var4;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  #services {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+
+    .service-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 10rem;
+      margin: 10px;
+      margin-top: 30px;
+      hr {
+        margin-top: 10px;
+        font-weight: bold;
+        background-color: $var2;
+      }
+
+      h1 {
+        font-size: 2.1rem;
+        word-spacing: 4px;
+      }
+
+      p {
+        opacity: 0.7;
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+    }
+    .service-btn {
+      width: 200px;
+      margin: 1rem 0;
+      padding: 0.8rem 3rem;
+      border: 0.1rem solid #6588b9;
+      border-radius: 20px;
+      background-color: rgb(238, 233, 233);
+      cursor: pointer;
+      outline: none;
+      color: #6588b9;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #6588b9;
+        color: $var4;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    .container {
+      width: 100%;
+      padding: 0 20px;
+      #patientContainer {
+        justify-content: center;
+      }
+    }
+    #showcase {
+      width: 100%;
+      flex-direction: column;
+
+      .showcase-text {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      .showcase-btn {
+        margin-top: 10px;
+      }
+    }
+    #services {
+      .service-header {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .navbar {
+      flex-direction: column;
+      height: auto;
+      justify-content: center;
+      .logo {
+        margin-bottom: 10px;
+      }
+      .nav-links {
+        flex-direction: column;
+
+        li a {
+          padding: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .container {
+      #patientContainer {
+        flex-direction: column;
+        align-items: center;
+
+        .patient {
+          width: 90%;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

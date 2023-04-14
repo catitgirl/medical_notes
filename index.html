@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MedicalNotes</title>
+		<link rel="stylesheet" href="homePage/styles/style.css" />
+		<link
+			rel="shortcut icon"
+			href="homePage/pictures/logoheart.png"
+			type="image/x-icon"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<div class="container">
+			<nav class="navbar">
+				<img
+					src="homePage/pictures/logoheart.png"
+					alt="trafalgar"
+					class="logo"
+				/>
+				<ul class="nav-links">
+					<li><a href="#showcase">Главная</a></li>
+					<li><a href="./createPatient/index.html">Для доктора</a></li>
+					<li><a href="./createPage/index.html">Пациенты</a></li>
+					<li><a href="#testimonials">Отзывы</a></li>
+					<li><a href="#article">О нас</a></li>
+					
+				</ul>
+				<div class="hamburger-menu">
+					<i class="fas fa-bars fa-2x" id="open"></i>
+				</div>
+				<ul class="sidebar" id="sidebar">
+					<i class="fas fa-times fa-2x" id="close"></i>
+					<li><a href="#showcase">Главная</a></li>
+					<li><a href="./regForm/index.html">Для доктора</a></li>
+					<li><a href="./createPage/index.html">Для пациента</a></li>
+					<li><a href="#services">Услуги</a></li>
+					<li><a href="#article">О нас</a></li>
+				</ul>
+				<div class="login-btn"><a href="#iw-modal" class="iw-modal-btn">Log in</a></div>
+			</nav>
+			<div id="iw-modal" class="iw-modal">
+				<div class="iw-modal-wrapper">
+				<div class="iw-CSS-modal-inner">
+				<div class="iw-modal-header">
+				<h3 class="iw-modal-title">Авторизация</h3>
+				<a href="#close" title="Закрыть" class="iw-close">×</a>
+				</div>
+				<div class="iw-modal-text">    
+					<form class="form" action="" method="post">
+					<input
+				      class="input input-email"
+				      type="email"
+					  id="email"
+					  placeholder="Ваш e-mail*"
+					/>
+					<div id="errorMessage"></div>
+			  
+					<input
+					  class="input input-pasword"
+					  type="password"
+					  id="password"
+					  placeholder="Пароль*"
+					/>
+					<div id="errorMessage-1"></div>
+					<button type="button" class="app-btn" id="log-btn">Войти</button>
+					<div class="log-in_error">Логин или пароль не зарегистрирован</div>
+					<p>Еще не зарегистрированы?</p>
+					<button type="button" class="app-btn" id="reg-btn">Зарегистрироваться</button>
+				</form>
+				</div>
+				</div>
+				</div>	
+				</div>
+				
+			<section id="showcase">
+				<div class="showcase-text">
+					<h1>MedicalNotes</h1>
+					<p class="intro-info">
+						Ваш персональный виртуальный помощник в организации и
+						получении медицинской помощи. Больше никакой потери
+						времени на заполнение документов или ожидания приема
+						врача. Наш сервис одновременно полезен для врачей и их
+						пациентов
+					</p>
+					<button
+						class="showcase-btn"
+						onclick="document.location='regForm/index.html'"
+					>
+						Зарегистрироваться
+					</button>
+				</div>
+				<div class="showcase-img">
+					<img src="homePage/pictures/doctors.png" alt="illustration" />
+				</div>
+			</section>
+
+			<section id="services">
+				<div class="service-header">
+					<h1>Наши услуги</h1>
+					<hr />
+					<p>
+						Мы разрабатываем и поставляем программное обеспечение
+						для врачей и их пациентов. Наши услуги позволяют
+						организовывать и хранить данные, необходимые для
+						оперативного и качественного сбора информации и
+						постановки клинических диагнозов. Доверяя нам, вы
+						получаете гарантии безопасности ваших данных и
+						высокотехнологичную помощь.
+					</p>
+				</div>
+				<div class="cards">
+					<div class="card">
+						<img
+							src="https://i.ibb.co/zfyYhmv/Frame1.png"
+							alt="frame"
+						/>
+						<h3>Поиск доктора</h3>
+						<p>
+							В нашей базе Вы сможете подобрать себе доктора по
+							всем важным для Вас критериям. Наши доктора обладают
+							высокой квалификацией и необходимыми практическими
+							навыками
+						</p>
+					</div>
+					<div class="card">
+						<img
+							src="https://i.ibb.co/pLyPsMG/Frame2.png"
+							alt="frame"
+						/>
+						<h3>Электронная аптека</h3>
+						<p>
+							С помощью нашего мобильного приложения вы с
+							легкостью сможете заказывать и оплачивать лекарства,
+							назначенные нашими специалистами
+						</p>
+					</div>
+					<div class="card">
+						<img
+							src="https://i.ibb.co/ph7X1tV/Frame3.png"
+							alt="frame"
+						/>
+						<h3>Консультации</h3>
+						<p>
+							Бесплатные пробные консультации со специалистами из
+							нашей базы
+						</p>
+					</div>
+					<div class="card">
+						<img
+							src="https://i.ibb.co/Xk1zg7f/Frame4.png"
+							alt="frame"
+						/>
+						<h3>Дополнительная информация</h3>
+						<p>
+							Получите направления и рекомендации для дальнейших
+							исследований со скидкой в наших клиниках-партнерах.
+						</p>
+					</div>
+					<div class="card">
+						<img
+							src="https://i.ibb.co/Hr6zdrS/Frame5.png"
+							alt="frame"
+						/>
+						<h3>Срочные консультации</h3>
+						<p>
+							Вы сможете заказать консультацию в любое время суток
+							с доступным врачом для Вас и Вашей семьи
+						</p>
+					</div>
+					<div class="card">
+						<img
+							src="https://i.ibb.co/WHY5Ptg/Frame6.png"
+							alt="frame"
+						/>
+						<h3>История консультаций</h3>
+						<p>
+							Данные о приемах пациентов, их информация остается в
+							базе данных для обеспечения полноценного и
+							качественного анализа истории заболеваний.
+						</p>
+					</div>
+				</div>
+				<button class="service-btn">Подробнее</button>
+			</section>
+
+			<section id="testimonials">
+				<div>
+				<div class="testimonial">
+					<h2>Отзывы наших клиентов</h2>
+					<hr />
+					<div class="testimonial-person">
+						<div class="person">
+							<img
+								src="https://i.ibb.co/CWdSdLS/person.png"
+								alt="person"
+							/>
+							<div class="person-text">
+								<h3>Edward Newgate</h3>
+								<p>Founder Circle</p>
+							</div>
+						</div>
+						<div class="testimonial-text">
+							<p>
+								<i>
+									“Our dedicated patient engagement app and
+									web portal allow you to access information
+									instantaneously (no tedeous form, long
+									calls, or administrative hassle) and
+									securely”
+								</i>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="testimonial">
+					<h2>Отзывы наших клиентов</h2>
+					<hr />
+					<div class="testimonial-person">
+						<div class="person">
+							<img
+								src="homepage/pictures/testim-woman.png"
+								width="140"
+								height="140"
+								alt="person"
+							/>
+							<div class="person-text">
+								<h3>Lucy Garold</h3>
+								<p>Founder Circle</p>
+							</div>
+						</div>
+						<div class="testimonial-text">
+							<p>
+								<i> "We’ve seen in our behavioral health areas that our patients actually engage better with the telehealth technology." </i>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="testimonial">
+					<h2>Отзывы наших клиентов</h2>
+					<hr />
+					<div class="testimonial-person">
+						<div class="person">
+							<img
+								src="homePage/pictures/testim-man.png"
+								width="150"
+								height="140"
+								alt="person"
+							/>
+							<div class="person-text">
+								<h3>Bryn Seay</h3>
+								<p>Benefits Manager</p>
+							</div>
+						</div>
+						<div class="testimonial-text">
+							<p>
+								<i> "People have become dependent on this virtual benefit. We have had so much positive feedback that we know we will always have this option available." </i>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="testimonial-arrows">
+					<a class="previous-arrow" onclick="previousSlide()">&#10094</a>
+					<a class="next-arrow" onclick="nextSlide()">&#10095</a>
+				</div>
+			</section>
+
+			<section id="article">
+				<h1>Последние новости</h1>
+				<hr />
+				<div class="cards">
+					<div class="card">
+						<div class="card-img">
+							<img
+								src="https://i.ibb.co/mtjHwsg/img1.png"
+								alt="img"
+							/>
+						</div>
+						<div class="card-text">
+							<h3>
+								Полезна ли комплексная диагностика организма
+							</h3>
+							<p>
+								По окончании диагностики пациент получает
+								развернутую информацию о состоянии его
+								здоровья...
+							</p>
+							<div>
+								<a
+									href="https://spbmz.ru/pages/posts/kompleksnaja-diagnostika-organizma-check-up-1122.php"
+									class="article-btn"
+									>Подробнее</a
+								>
+
+								<i class="fas fa-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-img">
+							<img
+								src="https://i.ibb.co/C0b6BWB/img2.png"
+								alt="img"
+							/>
+						</div>
+						<div class="card-text">
+							<h3>Гомеопатия, безопасная для человека</h3>
+							<p>
+								Гомеопатия часто становится полезной там, где
+								казалось бы уже все шансы на выздоровление
+								потеряны...
+							</p>
+							<div>
+								<a
+									href="https://imedic.kiev.ua/statyi/gomeopatiya/427-gomeopatija-osobennosti-gomeopaticheskogo-lechenija"
+									class="article-btn"
+									>Подробнее</a
+								>
+
+								<i class="fas fa-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-img">
+							<img
+								src="https://i.ibb.co/VtHsp41/img3.png"
+								alt="img"
+							/>
+						</div>
+						<div class="card-text">
+							<h3>
+								Помощники по уходу за кожей лица на основе
+								натуральных ингредиентов
+							</h3>
+							<p>
+								У натуральной косметики есть свои преимущества:
+								она состоит из органических веществ...
+							</p>
+							<div>
+								<a
+									href="https://www.kp.ru/woman/krasota/luchshie-brendy-naturalnoj-kosmetiki/"
+									class="article-btn"
+									>Подробнее</a
+								>
+
+								<i class="fas fa-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					class="articleBtn"
+					onClick='location.href="https://rg.ru/tema/obshestvo/zdorovje/"'
+				>
+					Смотреть все
+				</button>
+			</section>
+			<footer>
+				<hr />
+				<div class="footer-container">
+					<div class="footer-social">
+						<ul class="foot-socials">
+							<li>
+								<a href="#"
+									><img
+										src="homePage/pictures/inst1.svg"
+										alt="inst"
+										width="24"
+								/></a>
+							</li>
+							<li>
+								<a href="#"
+									><img
+										src="homePage/pictures/fb.svg"
+										alt="fb"
+										width="24"
+								/></a>
+							</li>
+							<li>
+								<a href="#"
+									><img
+										src="homePage/pictures/tw1.svg"
+										alt="tw"
+										width="24"
+								/></a>
+							</li>
+							<li>
+								<a href="#"
+									><img
+										src="homePage/pictures/pinterest1.svg"
+										alt="pint"
+										width="24"
+								/></a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-rights">© Все права защищены 2023</div>
+					<div class="footer-nav">
+						<ul class="foot-nav--list">
+							<li><a href="#showcase">Главная</a></li>
+							<li>
+								<a href="/regForm/index.html">Для доктора</a>
+							</li>
+							<li><a href="/createPage/index.html">Для пациента</a></li>
+							<li><a href="#testimonials">Отзывы</a></li>
+							<li><a href="#article">О нас</a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="https://kit.fontawesome.com/78dec00433.js" crossorigin="anonymous"></script>
+		<script src="homePage/scripts/script.js"></script>
+	</body>
+</html>

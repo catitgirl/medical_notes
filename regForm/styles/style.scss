@@ -1,0 +1,18 @@
+$var1: #b641b0;
+
+#ftr {
+	color: blue;
+	border: 3px solid $var1;
+	.sec1 {
+		padding-top: 10px;
+		span {
+			color: red;
+		}
+	}
+	.pic {
+		margin: -5px;
+		&:hover {
+			color: green;
+		}
+	}
+}

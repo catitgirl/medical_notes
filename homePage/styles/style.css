@@ -1,0 +1,738 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&display=swap");
+.foot-nav--list, .footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  background-color: rgb(233, 233, 233);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+a:hover:after, a:focus:after {
+  width: 100%;
+}
+a:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ecae02;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+.nav-links li a, .login-btn a {
+  color: #555;
+  padding: 0 1.1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.navbar {
+  padding-top: 2rem;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+}
+.nav-links li a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  display: none;
+}
+.hamburger-menu i {
+  color: #6588b9;
+}
+
+.login-btn {
+  width: 50%;
+  margin-left: auto;
+  text-align: right;
+}
+
+.iw-modal {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  transition: all 0.5s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.iw-modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.iw-modal-wrapper {
+  margin: auto;
+  margin-top: 25vh;
+}
+
+.iw-CSS-modal-inner {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+}
+
+.iw-modal-header {
+  padding: 15px;
+  background: #f1f1f1;
+  position: relative;
+}
+
+.iw-modal-title {
+  font-size: 18px;
+  color: #555;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*CSS для кнопки закрытия*/
+.iw-close {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 24px;
+  color: #555;
+  text-decoration: none;
+}
+
+.iw-close:hover, .iw-close:focus {
+  color: #000;
+  cursor: pointer;
+}
+
+/*CSS для блока с текстом*/
+.iw-modal-text {
+  padding: 15px 20px;
+}
+
+@media (min-width: 550px) {
+  .iw-modal-wrapper {
+    max-width: 500px;
+  }
+}
+.form {
+  max-width: 370px;
+  padding: 15px;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.app-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin: 2rem 0;
+  border: 0.1rem solid #458ff6;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  color: #458ff6;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.app-btn:hover {
+  background-color: #458ff6;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.log-in_error {
+  display: none;
+  color: #f30101;
+}
+
+#errorMessage,
+#errorMessage-1 {
+  height: 1rem;
+  color: red;
+}
+
+.sidebar {
+  display: none;
+  position: fixed;
+  top: -1rem;
+  left: 0;
+  height: 100%;
+  width: 15rem;
+  background-color: #5A98F2;
+  z-index: 1;
+}
+.sidebar i {
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.sidebar li a {
+  color: #fff;
+  line-height: 7;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0 1rem 0 0.5rem;
+}
+
+#showcase {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-text {
+  width: 40vw;
+}
+.showcase-text h1 {
+  font-size: 3rem;
+  width: 90%;
+}
+
+.intro-info {
+  width: 80%;
+  opacity: 0.9;
+  line-height: 1.5;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+.showcase-btn {
+  margin-top: 1rem;
+  height: 50px;
+  border: none;
+  box-shadow: 0px 0px 4px 2px #ecae02;
+  background-color: #6588b9;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.8rem 2rem;
+  font-weight: 700;
+  outline: none;
+  font-family: "Montserrat Alternates", sans-serif;
+  cursor: pointer;
+}
+.showcase-btn:hover {
+  opacity: 0.9;
+}
+
+.showcase-img {
+  flex: 4;
+}
+.showcase-img img {
+  width: 90%;
+}
+
+#services {
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+
+.service-header {
+  text-align: center;
+  padding: 0 10rem;
+}
+.service-header h1 {
+  font-size: 2.1rem;
+  word-spacing: 4px;
+}
+.service-header p {
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+hr {
+  width: 4rem;
+  height: 3px;
+  font-weight: bold;
+  background-color: #000;
+}
+
+#services .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.4rem;
+  margin-top: 6rem;
+}
+#services .cards h1 {
+  text-align: center;
+}
+#services .cards .card {
+  padding: 3rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+#services .cards .card:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  overflow: hidden;
+  transition: 0.3s ease all;
+}
+#services .cards .card h3 {
+  font-size: 1.3rem;
+}
+#services .cards .card p {
+  opacity: 0.6;
+}
+
+.service-btn {
+  margin: 3rem 0;
+  padding: 0.8rem 3rem;
+  border: 0.1rem solid #6588b9;
+  border-radius: 20px;
+  background-color: rgb(233, 233, 233);
+  cursor: pointer;
+  outline: none;
+  color: #6588b9;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.service-btn:hover {
+  background-color: #6588b9;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#testimonials {
+  margin-top: 60px;
+  height: 70vh;
+}
+
+.testimonial {
+  height: 50vh;
+  width: 1100px;
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+  background: linear-gradient(to left, #67C3F3, #5A98F2);
+  color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+}
+.testimonial hr {
+  width: 4rem;
+  height: 3px;
+  font-weight: bold;
+  background-color: #fff;
+}
+.testimonial h2 {
+  font-size: 2rem;
+  word-spacing: 3px;
+}
+
+.testimonial-person {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.person {
+  display: flex;
+  flex: 1;
+}
+.person img {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-right: 2rem;
+}
+
+.person-text p {
+  opacity: 0.7;
+  text-align: left;
+}
+
+.testimonial-text {
+  flex: 1;
+  line-height: 1.5;
+}
+.testimonial-text p {
+  opacity: 0.9;
+  font-size: 1.05;
+}
+
+.testimonials .testimonial {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.testimonial-arrows {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-left: 40px;
+}
+
+.previous-arrow, .next-arrow {
+  width: 4rem;
+  color: #458ff6;
+}
+
+.previous-arrow:hover:after, .next-arrow:hover:after,
+.previous-arrow:focus:after, .next-arrow:focus:after {
+  width: 0;
+}
+
+#article {
+  text-align: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#article h1 {
+  font-size: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.card-img img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-text {
+  padding: 0 3rem 1rem 3rem;
+  text-align: left;
+}
+.card-text button {
+  background-color: transparent;
+  border: none;
+  color: #5A98F2;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.card-text i {
+  margin-left: 5px;
+}
+.card-text h1 {
+  line-height: 1.5;
+}
+.card-text p {
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.article-btn {
+  color: #458ff6;
+}
+
+#article .articleBtn {
+  border: none;
+  background-color: #6588b9;
+  border: 1px solid #6588b9;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.8rem 3rem;
+  margin-top: 3rem;
+  outline: none;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+#article .articleBtn:hover {
+  background-color: #6588b9;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+footer hr {
+  width: 100%;
+  height: 0px;
+  border: 1px solid #d0d0d0;
+}
+
+.footer-social {
+  display: flex;
+  width: 25%;
+  align-items: flex-end;
+}
+
+.foot-socials {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-left: 0;
+}
+
+.footer-rights {
+  display: flex;
+  width: 35%;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 15px;
+}
+
+.footer-nav {
+  width: 25%;
+  justify-content: flex-end;
+}
+
+.foot-nav--list {
+  padding: 0;
+}
+.foot-nav--list li a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger-menu {
+    display: inline-block;
+  }
+  #showcase {
+    margin-top: 10rem;
+    flex-direction: column;
+    margin-right: 0rem;
+  }
+  .showcase-text {
+    width: 100%;
+    text-align: center;
+    margin-right: 0rem;
+    order: 2;
+    padding: 0 2rem;
+  }
+  .showcase-text h1 {
+    font-size: 3rem;
+    width: 100%;
+  }
+  .showcase-text p {
+    width: 100%;
+    opacity: 0.9;
+    line-height: 1.5;
+    font-size: 1.1rem;
+  }
+  #showcase {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .showcase-btn:hover {
+    opacity: 0.9;
+  }
+  .showcase-img {
+    flex: 4;
+    text-align: center;
+  }
+  .showcase-img img {
+    width: 60%;
+  }
+  #services {
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 25rem;
+  }
+  #services .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.4rem;
+  }
+  .service-header {
+    padding: 0 2rem;
+  }
+  .service-btn {
+    margin: 3rem 0;
+    padding: 0.8rem 3rem;
+    border: 0.1rem solid #458ff6;
+    border-radius: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    color: #458ff6;
+    font-weight: bold;
+  }
+  .service-btn:hover {
+    background-color: #458ff6;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  #testimonials {
+    margin-top: 15rem;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .testimonial {
+    width: 100%;
+    height: 100%;
+  }
+  .testimonial-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  #article h1 {
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
+  #article .cards {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 20%;
+  }
+  #article .card {
+    width: 60%;
+    text-align: center;
+    align-items: center;
+  }
+  #article .card-img img {
+    width: 100%;
+  }
+  #article .card-text {
+    padding: 0 3rem 1rem 3rem;
+    text-align: left;
+  }
+  #article .card-text button {
+    background-color: transparent;
+    border: none;
+    color: #5A98F2;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 800px) and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+  .iw-CSS-modal-inner {
+    width: 360px;
+    margin-left: 20px;
+  }
+  .form {
+    width: 260px;
+  }
+  #testimonials {
+    display: none;
+  }
+  #services {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 0;
+    /*& .cards .card{
+        width;
+        width: -moz-fit-content;
+        width: fit-content;
+    }*/
+  }
+  #services .cards .card p {
+    display: none;
+  }
+  #services .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2.4rem;
+  }
+  #article {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 10px;
+  }
+  #article .cards {
+    margin-left: 10%;
+  }
+  #article .card {
+    width: 80%;
+    text-align: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */
